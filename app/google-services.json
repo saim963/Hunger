@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "949836206257",
+    "project_id": "fir-login-signup-50a1c",
+    "storage_bucket": "fir-login-signup-50a1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949836206257:android:6198275232bcec44ed5290",
+        "android_client_info": {
+          "package_name": "com.example.hunger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "949836206257-gnqcnbc6sa7d4tdiqgp250adeq2g6vcs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hunger",
+            "certificate_hash": "8e7e04ffab199ee0239cec8d6b885e9a95abc082"
+          }
+        },
+        {
+          "client_id": "949836206257-tdcv71kmck69f97sq8ecc291pgnss0b5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6SpTRw0QewAGGzgAXAPTwceYkt-KV_E0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "949836206257-tdcv71kmck69f97sq8ecc291pgnss0b5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

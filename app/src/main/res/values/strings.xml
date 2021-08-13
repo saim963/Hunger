@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hunger</string>
+    <string name="get_started">GET STARTED</string>
+    <string name="next">NEXT</string>
+    <string name="already_have_an_account_signup">Already have an account? <b>SignUp</b></string>
+    <string name="login">LOGIN</string>
+</resources>

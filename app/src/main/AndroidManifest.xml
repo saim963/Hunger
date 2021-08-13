@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hunger">
+    <!-- adding internet permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:icon="@mipmap/iconfood"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/iconfood"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Hunger">
+        <activity
+            android:name=".five"
+            android:exported="true" />
+        <activity
+            android:name=".four"
+            android:exported="true" />
+        <activity
+            android:name=".three"
+            android:exported="true" />
+        <activity
+            android:name=".two"
+            android:exported="true" />
+        <activity
+            android:name=".one"
+            android:exported="true" />
+        <activity
+            android:name=".profileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginPage"
+            android:exported="true" />
+        <activity android:name=".HomeScreen" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

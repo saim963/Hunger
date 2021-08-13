@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bckgrnd"
+    android:padding="5dp"
+    tools:context=".profileActivity">
+
+    <!--Show info of logged in user, add log out button-->
+
+    <TextView
+        android:id="@+id/captionTv"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You're LoggedIn as"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.042"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934" />
+
+    <TextView
+        android:id="@+id/emailTv"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/logOutBtn"
+        app:layout_constraintHorizontal_bias="0.074"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/captionTv"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <Button
+        android:id="@+id/logOutBtn"
+        android:layout_width="101dp"
+        android:layout_height="36dp"
+        android:text="logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/champagne_limousines_bold_italic"
+        android:text="Restaurants around you"
+        android:textSize="25sp"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="356dp"
+        android:layout_height="551dp"
+        android:background="#574F4F"
+        android:backgroundTint="#FFFFFF"
+        android:padding="8sp"
+        app:cardCornerRadius="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:columnCount="1"
+                android:rowCount="2">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/idc1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10sp"
+                    android:layout_margin="8sp">
+
+                    <ImageView
+                        android:id="@+id/mcdimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/mcdonalds">
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/mcdtxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Mc Donalds"
+                        android:textColor="#000"
+                        android:textSize="25dp"
+                        android:layout_marginTop="150dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+                    </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/idc2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10sp"
+                    android:layout_margin="8sp">
+
+                    <ImageView
+                        android:id="@+id/kfcimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/kfc">
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/kfctxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="KFC"
+                        android:textColor="#000"
+                        android:textSize="25dp"
+                        android:layout_marginTop="150dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+                    </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/idc3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10sp"
+                    android:layout_margin="8sp">
+
+                    <ImageView
+                        android:id="@+id/dominoimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/dominos">
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/dominostxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Dominos"
+                        android:textColor="#000"
+                        android:textSize="25dp"
+                        android:layout_marginTop="150dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+                    </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/idc4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10sp"
+                    android:layout_margin="8sp">
+
+                    <ImageView
+                        android:id="@+id/phimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ph">
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/phtxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Pizza Hut"
+                        android:textColor="#000"
+                        android:textSize="25dp"
+                        android:layout_marginTop="150dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+                    </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/idc5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10sp"
+                    android:layout_margin="8sp">
+
+                    <ImageView
+                        android:id="@+id/sherimg"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sher">
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/shertxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Sher e Punjab"
+                        android:textColor="#000"
+                        android:textSize="25dp"
+                        android:layout_marginTop="150dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+                    </TextView>
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
