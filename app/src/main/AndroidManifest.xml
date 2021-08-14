@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Hunger">
         <activity
+            android:name=".cart"
+            android:exported="true" />
+        <activity
             android:name=".five"
             android:exported="true" />
         <activity
