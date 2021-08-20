@@ -1,525 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/oneLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="5dp"
-    android:background="@drawable/menu"
     tools:context=".one">
 
-    <TextView
+    <LinearLayout
+        android:background="#E7E7E7"
+        android:id="@+id/panel"
+        android:orientation="horizontal"
+        android:weightSum="16"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/champagne_limousines_bold_italic"
-        android:text="MENU"
-        android:textSize="25sp"
-        android:textColor="#FFF"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="356dp"
-        android:layout_height="551dp"
-        android:background="#574F4F"
-        android:backgroundTint="#FFFFFF"
-        android:padding="8sp"
-        app:cardCornerRadius="10sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:ignore="SpeakableTextPresentCheck">
-
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:columnCount="1"
-                android:rowCount="2">
-
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/idc1"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10sp"
-                    app:cardCornerRadius="20sp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="110sp"
-                        android:layout_height="110sp"
-                        app:cardCornerRadius="110sp">
-
-                        <ImageView
-                            android:layout_width="115dp"
-                            android:layout_height="115dp"
-                            android:layout_gravity="left"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/mcmint"
-                            android:textAlignment="gravity" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_marginStart="120sp"
-                        android:text="Mc Mint"
-                        android:textAlignment="gravity"
-                        android:textColor="#000"
-                        android:textSize="30sp"
-                        android:textStyle="italic">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170sp"
-                        android:textColor="#878282"
-                        android:text="Rs 80"
-                        android:textSize="20sp"
-                        android:layout_marginTop="50sp"/>
-
-                    <Button
-                        android:id="@+id/atc1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add to cart"
-                        android:textColor="#1E92D8"
-                        android:background="#fff"
-                        android:layout_row="0"
-                        android:layout_column="7"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="100sp"
-                        android:layout_marginRight="5sp"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/idc2"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10sp"
-                    app:cardCornerRadius="20sp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="110sp"
-                        android:layout_height="110sp"
-                        app:cardCornerRadius="110sp">
-
-                        <ImageView
-                            android:layout_width="110sp"
-                            android:layout_height="110sp"
-                            android:layout_gravity="left"
-                            android:src="@drawable/classic"
-                            android:scaleType="centerCrop"
-                            android:textAlignment="gravity" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_marginStart="120sp"
-                        android:text="Classic"
-                        android:textAlignment="gravity"
-                        android:textColor="#000"
-                        android:textSize="30sp"
-                        android:textStyle="italic">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170sp"
-                        android:textColor="#878282"
-                        android:text="Rs 65"
-                        android:textSize="20sp"
-                        android:layout_marginTop="50sp"/>
-
-                    <Button
-                        android:id="@+id/atc2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add to cart"
-                        android:textColor="#1E92D8"
-                        android:background="#fff"
-                        android:layout_row="0"
-                        android:layout_column="7"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="100sp"
-                        android:layout_marginRight="5sp"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/idc3"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10sp"
-                    app:cardCornerRadius="20sp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="110sp"
-                        android:layout_height="110sp"
-                        app:cardCornerRadius="110sp">
-
-                        <ImageView
-                            android:layout_width="110sp"
-                            android:layout_height="110sp"
-                            android:layout_gravity="left"
-                            android:src="@drawable/coke"
-                            android:scaleType="centerCrop"
-                            android:textAlignment="gravity" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_marginStart="120sp"
-                        android:text="Coke"
-                        android:textAlignment="gravity"
-                        android:textColor="#000"
-                        android:textSize="30sp"
-                        android:textStyle="italic">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170sp"
-                        android:textColor="#878282"
-                        android:text="Rs 45"
-                        android:textSize="20sp"
-                        android:layout_marginTop="50sp"/>
-
-                    <Button
-                        android:id="@+id/atc3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add to cart"
-                        android:textColor="#1E92D8"
-                        android:background="#fff"
-                        android:layout_row="0"
-                        android:layout_column="7"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="100sp"
-                        android:layout_marginRight="5sp"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/idc4"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10sp"
-                    app:cardCornerRadius="20sp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="110sp"
-                        android:layout_height="110sp"
-                        app:cardCornerRadius="110sp">
-
-                        <ImageView
-                            android:layout_width="110sp"
-                            android:layout_height="110sp"
-                            android:layout_gravity="left"
-                            android:src="@drawable/nuggets"
-                            android:scaleType="centerCrop"
-                            android:textAlignment="gravity" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_marginStart="120sp"
-                        android:text="6-Nuggets"
-                        android:textAlignment="gravity"
-                        android:textColor="#000"
-                        android:textSize="30sp"
-                        android:textStyle="italic">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170sp"
-                        android:textColor="#878282"
-                        android:text="Rs 90"
-                        android:textSize="20sp"
-                        android:layout_marginTop="50sp"/>
-
-                    <Button
-                        android:id="@+id/atc4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add to cart"
-                        android:textColor="#1E92D8"
-                        android:background="#fff"
-                        android:layout_row="0"
-                        android:layout_column="7"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="100sp"
-                        android:layout_marginRight="5sp"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/idc5"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10sp"
-                    app:cardCornerRadius="20sp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="110sp"
-                        android:layout_height="110sp"
-                        app:cardCornerRadius="110sp">
-
-                        <ImageView
-                            android:layout_width="110sp"
-                            android:layout_height="110sp"
-                            android:layout_gravity="left"
-                            android:src="@drawable/saladc"
-                            android:scaleType="centerCrop"
-                            android:textAlignment="gravity" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_marginStart="120sp"
-                        android:text="Salad C"
-                        android:textAlignment="gravity"
-                        android:textColor="#000"
-                        android:textSize="30sp"
-                        android:textStyle="italic">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170sp"
-                        android:textColor="#878282"
-                        android:text="Rs 75"
-                        android:textSize="20sp"
-                        android:layout_marginTop="50sp"/>
-
-                    <Button
-                        android:id="@+id/atc5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add to cart"
-                        android:textColor="#1E92D8"
-                        android:background="#fff"
-                        android:layout_row="0"
-                        android:layout_column="7"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="100sp"
-                        android:layout_marginRight="5sp"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/idc6"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10sp"
-                    app:cardCornerRadius="20sp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="110sp"
-                        android:layout_height="110sp"
-                        app:cardCornerRadius="110sp">
-
-                        <ImageView
-                            android:layout_width="110sp"
-                            android:layout_height="110sp"
-                            android:layout_gravity="left"
-                            android:src="@drawable/fries"
-                            android:scaleType="centerCrop"
-                            android:textAlignment="gravity" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_marginStart="120sp"
-                        android:text="Fries"
-                        android:textAlignment="gravity"
-                        android:textColor="#000"
-                        android:textSize="30sp"
-                        android:textStyle="italic">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170sp"
-                        android:textColor="#878282"
-                        android:text="Rs 65"
-                        android:textSize="20sp"
-                        android:layout_marginTop="50sp"/>
-
-                    <Button
-                        android:id="@+id/atc6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add to cart"
-                        android:textColor="#1E92D8"
-                        android:background="#fff"
-                        android:layout_row="0"
-                        android:layout_column="7"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="100sp"
-                        android:layout_marginRight="5sp"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/idc7"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10sp"
-                    app:cardCornerRadius="20sp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="110sp"
-                        android:layout_height="110sp"
-                        app:cardCornerRadius="110sp">
-
-                        <ImageView
-                            android:layout_width="110sp"
-                            android:layout_height="110sp"
-                            android:layout_gravity="left"
-                            android:src="@drawable/mcchicken"
-                            android:scaleType="centerCrop"
-                            android:textAlignment="gravity" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_marginStart="120sp"
-                        android:text="Mc Chicken"
-                        android:textAlignment="gravity"
-                        android:textColor="#000"
-                        android:textSize="30sp"
-                        android:textStyle="italic">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170sp"
-                        android:textColor="#878282"
-                        android:text="Rs 215"
-                        android:textSize="20sp"
-                        android:layout_marginTop="50sp"/>
-
-                    <Button
-                        android:id="@+id/atc7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add to cart"
-                        android:textColor="#1E92D8"
-                        android:background="#fff"
-                        android:layout_row="0"
-                        android:layout_column="7"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="100sp"
-                        android:layout_marginRight="5sp"/>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/idc8"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_gravity="fill"
-                    android:layout_margin="10sp"
-                    app:cardCornerRadius="20sp">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="110sp"
-                        android:layout_height="110sp"
-                        app:cardCornerRadius="110sp">
-
-                        <ImageView
-                            android:layout_width="110sp"
-                            android:layout_height="110sp"
-                            android:layout_gravity="left"
-                            android:src="@drawable/brgr"
-                            android:scaleType="centerCrop"
-                            android:textAlignment="gravity" />
-                    </androidx.cardview.widget.CardView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
-                        android:layout_marginStart="170sp"
-                        android:text="Burger"
-                        android:textAlignment="gravity"
-                        android:textColor="#000"
-                        android:textSize="30sp"
-                        android:textStyle="italic">
-
-                    </TextView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="170sp"
-                        android:textColor="#878282"
-                        android:text="Rs 45"
-                        android:textSize="20sp"
-                        android:layout_marginTop="50sp"/>
-
-                    <Button
-                        android:id="@+id/atc8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add to cart"
-                        android:textColor="#1E92D8"
-                        android:background="#fff"
-                        android:layout_row="0"
-                        android:layout_column="7"
-                        android:layout_gravity="end"
-                        android:layout_marginTop="100sp"
-                        android:layout_marginRight="5sp"/>
-
-                </androidx.cardview.widget.CardView>
-
-            </GridLayout>
-        </ScrollView>
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="?android:attr/actionBarSize">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_gravity="start|center_vertical"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_navigate_before_24"/>
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="11"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:text="DRINK LIST"/>
+
+        <FrameLayout
+            android:id="@+id/btnCart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <ImageView
+                android:id="@+id/cartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/cartpng"/>
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:id="@+id/badge"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/cartButton"
+                android:layout_alignTop="@id/cartButton"
+                android:layout_marginLeft="10dp"
+                android:nbMaxTextLength="2"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_drink"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/panel"
+        android:padding="8dp" />
+
+</RelativeLayout>
